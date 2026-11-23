@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    line-height:1.6;
+    background:#f4f7fc;
+}
+
+/* Header */
+header{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Navigation - Flexbox */
+nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    list-style:none;
+    background:#2563eb;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+/* Main Layout - Grid */
+.layout{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.content article{
+    background:white;
+    margin-bottom:20px;
+    padding:20px;
+    border-radius:10px;
+}
+
+/* Flexbox Cards */
+.card-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.card{
+    flex:1 1 250px;
+    background:#dbeafe;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* Resources Grid */
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:20px 0;
+}
+
+.resource{
+    background:#bfdbfe;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+/* Figure */
+figure img{
+    width:100%;
+    border-radius:10px;
+}
+
+figcaption{
+    text-align:center;
+    margin-top:10px;
+    font-style:italic;
+}
+
+/* Sidebar */
+aside{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+aside ul{
+    margin-left:20px;
+}
+
+/* Footer */
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* Responsive Design */
+@media (max-width:768px){
+
+    .layout{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    .resource-grid{
+        grid-template-columns:1fr;
+    }
+}
