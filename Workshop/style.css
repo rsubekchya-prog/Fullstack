@@ -4,40 +4,58 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #eeeeee;
+  font-family: Verdana, sans-serif;
+  background-color: #fbf3e4;
+  color: #333;
 }
 
-img, video {
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+img {
   max-width: 100%;
 }
 
-audio {
+video, audio {
   width: 100%;
 }
 
+a {
+  color: #b5481f;
+}
+
+/* header */
 header {
-  background-color: darkblue;
-  color: white;
+  background-color: #2f4f4f;
+  color: #fbf3e4;
   text-align: center;
-  padding: 20px;
+  padding: 25px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
 }
 
 /* nav */
 nav {
   display: flex;
   flex-direction: column;
-  background-color: steelblue;
+  background-color: #3e6666;
+  border-bottom: 4px solid #e0a030;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 12px;
+  text-align: center;
 }
 
 nav a:hover {
-  background-color: orange;
+  background-color: #e0a030;
+  color: black;
 }
 
 /* main */
@@ -48,83 +66,103 @@ main {
   padding: 15px;
 }
 
+.content {
+  min-width: 0;
+}
+
 section {
   background-color: white;
-  border: 1px solid gray;
   padding: 15px;
   margin-bottom: 20px;
+  border-left: 8px solid #e0a030;
 }
 
 h2 {
-  color: darkblue;
+  margin-top: 0;
+  color: #2f4f4f;
 }
 
-article {
-  border: 1px solid gray;
-  padding: 10px;
-  margin-bottom: 10px;
+figure {
+  margin: 0;
 }
 
-article:hover {
-  background-color: lightyellow;
+figure img {
+  width: 100%;
+  max-width: 400px;
 }
 
+figcaption {
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* cards */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
 }
 
+article {
+  border: 2px dashed #b5481f;
+  padding: 10px;
+}
+
+article:hover {
+  background-color: #fff0d9;
+}
+
+/* video and audio */
 .media-row {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+.media-row div {
+  flex: 1;
+}
+
+/* aside */
 aside {
-  background-color: lightyellow;
-  border: 1px solid gray;
+  background-color: #2f4f4f;
+  color: white;
   padding: 15px;
-  align-self: start;
 }
 
+aside h2 {
+  color: #e0a030;
+}
+
+/* footer */
 footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
-  background-color: darkblue;
+  background-color: #2f4f4f;
   color: white;
   padding: 20px;
 }
 
 footer a {
-  color: white;
+  color: #e0a030;
 }
 
 /* tablet */
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
   }
 
   .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cards article:last-child {
-    grid-column: 1 / 3;
-  }
-
-  .cards article:last-child img {
-    width: 300px;
+    grid-template-columns: 1fr 1fr;
   }
 
   footer {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -134,19 +172,21 @@ footer a {
     grid-template-columns: 3fr 1fr;
   }
 
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
+  .content {
+    grid-column: 1;
   }
 
-  .cards article:last-child {
-    grid-column: span 2;
+  aside {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
   }
 
   .media-row {
     flex-direction: row;
   }
 
-  .media-row article {
-    flex: 1;
+  footer {
+    grid-template-columns: 2fr 1fr 1fr;
   }
 }
