@@ -1,117 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnHub - Student Learning Resource Platform</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBridge</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>LearnHub</h1>
-        <p>Your Gateway to Academic Success</p>
-    </header>
+  <header>
+    <h1>BrainBridge</h1>
+    <p>This is a free Resources bridge for students</p>
+  </header>
 
-    <nav>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#resources">Resources</a>
+    <a href="#media">Media</a>
+    <a href="#announcements">Announcements</a>
+  </nav>
+
+  <main>
+
+    <div class="content">
+
+      <section id="home">
+        <h2>BrainBridge</h2>
+        <p>BrainBridge is a place for students to find notes, reading materials, and useful study resources in one place.</p>
+      </section>
+
+      <section id="courses">
+        <h2>Courses</h2>
+
+        <div class="cards">
+          <article>
+            <img src="images/html.png" alt="HTML course picture with boxes for header, nav and main">
+            <h3>HTML Basics</h3>
+            <p>Semantic tags to build the page structure.</p>
+            <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">Read about HTML</a>
+          </article>
+
+          <article>
+            <img src="images/css.png" alt="CSS course picture with colour boxes">
+            <h3>CSS Styling</h3>
+            <p>Colours, fonts, margins and padding.</p>
+            <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">Read about CSS</a>
+          </article>
+
+          <article>
+            <img src="images/flexbox.png" alt="Flexbox course picture with four boxes in a row">
+            <h3>Flexbox</h3>
+            <p>Layout in one direction, like a navbar.</p>
+            <a href="https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout" target="_blank">Read about Flexbox</a>
+          </article>
+
+          <article>
+            <img src="images/cssgrid.png" alt="CSS Grid course picture with a grid of six boxes">
+            <h3>CSS Grid</h3>
+            <p>Layout in rows and columns together.</p>
+            <a href="https://en.wikipedia.org/wiki/CSS_grid_layout" target="_blank">Read about Grid</a>
+          </article>
+
+          <article>
+            <img src="images/responsive.png" alt="Responsive design picture showing a phone, tablet and desktop screen">
+            <h3>Responsive Design</h3>
+            <p>Same page working on phone, tablet and desktop.</p>
+            <a href="https://en.wikipedia.org/wiki/Responsive_web_design" target="_blank">Read about Responsive Design</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="resources">
+        <h2>Study Resources</h2>
+        <p>Websites we use in class:</p>
         <ul>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#multimedia">Media</a></li>
-            <li><a href="#announcements">Announcements</a></li>
+          <li><a href="https://www.w3schools.com/css" target="_blank">W3Schools CSS</a></li>
+          <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+          <li><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+          <li><a href="https://cssgridgarden.com/" target="_blank">CSS Grid Garden</a></li>
         </ul>
-    </nav>
+      </section>
 
-    <main class="layout">
+      <section id="media">
+        <h2>Videos and Audio</h2>
 
-        <section class="content">
+        <div class="media-row">
+        <article>
+          <h3>Video:HTML</h3>
+          <p>This short video about what is html explaining its tags.</p>
+          <video controls width="100%">
+            <source src="videos/video.mp4" type="video/mp4">
+          </video>
+        </article>
 
-            <article id="courses">
-                <h2>Featured Courses</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Web Development</h3>
-                        <p>Learn HTML, CSS and JavaScript.</p>
-                    </div>
+        <article>
+          <h3>Audio: study music</h3>
+          <p>Play this while you are coding.</p>
+          <audio controls>
+            <source src="videos/auido.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+        </div>
+      </section>
 
-                    <div class="card">
-                        <h3>Database Systems</h3>
-                        <p>Master SQL and database design.</p>
-                    </div>
+      <section id="announcements">
+        <h2>Announcements</h2>
 
-                    <div class="card">
-                        <h3>Cyber Security</h3>
-                        <p>Explore network and information security.</p>
-                    </div>
-                </div>
-            </article>
+        <article>
+          <h3>Week 1 workshop</h3>
+          <p>Deploy your workshop to the student server and push it to the week1 branch on GitHub.</p>
+        </article>
 
-            <article id="resources">
-                <h2>Learning Resources</h2>
+        <article>
+          <h3>Assessment dates</h3>
+          <p>Practical exam in Week 7 & viva in Week 13 </p>
+        </article>
 
-                <div class="resource-grid">
-                    <div class="resource">Lecture Notes</div>
-                    <div class="resource">Tutorials</div>
-                    <div class="resource">Past Papers</div>
-                    <div class="resource">Research Articles</div>
-                </div>
+      </section>
 
-                <figure>
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800"
-                         alt="Students studying together">
-                    <figcaption>
-                        Students using digital learning resources.
-                    </figcaption>
-                </figure>
-            </article>
+    </div>
 
-            <article id="multimedia">
-                <h2>Multimedia Learning</h2>
+    <aside>
+      <h2>Quick Info</h2>
 
-                <h3>Educational Video</h3>
-                <video controls width="100%">
-                    <source src="sample-video.mp4" type="video/mp4">
-                </video>
+      <h3>Module</h3>
+      <p>5CS045 Full Stack Web Development</p>
 
-                <h3>Educational Podcast</h3>
-                <audio controls>
-                    <source src="sample-audio.mp3" type="audio/mpeg">
-                </audio>
-            </article>
+      <h3>Module Calendar</h3>
+      <ul>
+        <li>Week 1: Module Introduction</li>
+        <li>Week 2: Advanced PHP</li>
+        <li>Week 3: Advanced Database</li>
+      </ul>
 
-            <article id="announcements">
-                <h2>Announcements</h2>
-                <ul>
-                    <li>Assignment Submission: Friday</li>
-                    <li>Workshop Session: Wednesday</li>
-                    <li>Exam Preparation Seminar Next Week</li>
-                </ul>
-            </article>
+      <h3>Test widths</h3>
+      <ul>
+        <li>375px phone</li>
+        <li>768px tablet</li>
+        <li>1200px desktop</li>
+      </ul>
 
-        </section>
+      <h3>Jump to</h3>
+      <p><a href="#courses">Courses</a></p>
+      <p><a href="#resources">Resources</a></p>
+      <p><a href="#home">Back to top</a></p>
+    </aside>
 
-        <aside>
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="#">Moodle</a></li>
-                <li><a href="#">Library</a></li>
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Student Portal</a></li>
-            </ul>
-            </article>
- 
-</section>
- 
-<aside>
-<h2>Study Tips</h2>
-<p>Study consistently, practice coding daily, and review lecture notes regularly.</p>
-</aside>
- 
-</main>
- 
-<footer>
-<p>&copy; 2026 LearnHub Student Learning Resource Platform</p>
-</footer>
- 
+  </main>
+
+  <footer>
+    <div>
+      <h3>BrainBridge</h3>
+      <p>A Week 1 workshop project.</p>
+    </div>
+    <div>
+      <h3>Links</h3>
+      <p><a href="#courses">Courses</a></p>
+      <p><a href="#resources">Resources</a></p>
+    </div>
+    <div>
+      <h3>Module</h3>
+      <p>5CS045 Full Stack Web Development</p>
+      <p>Herald College Kathmandu</p>
+      <p>By Subekchya Rimal L5CG12</p>
+    </div>
+  </footer>
+
 </body>
 </html>
